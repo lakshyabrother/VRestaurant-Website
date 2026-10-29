@@ -1,0 +1,516 @@
+/* Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #faf7f0;
+    color: #26382b;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background: #183c2b;
+    color: white;
+    padding: 16px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #e6a56b;
+}
+
+.cart-btn {
+    background: #b85c38;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cart-btn:hover {
+    background: #934329;
+}
+
+/* Common Section & Button Styles */
+section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #183c2b;
+}
+
+.btn {
+    display: inline-block;
+    background: #b85c38;
+    color: white;
+    padding: 11px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #934329;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #183c2b;
+    border: 2px solid #183c2b;
+}
+
+.btn-outline:hover {
+    background: #183c2b;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left;
+    padding: 60px 8%;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 44px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+    color: #183c2b;
+}
+
+.hero-text p {
+    font-size: 17px;
+    margin-bottom: 24px;
+    color: #555;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 12px;
+}
+
+.hero-img {
+    width: 48%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* About Section */
+.about {
+    background: #f4ede2;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+}
+
+.about-img {
+    width: 45%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about-text h2 {
+    text-align: left;
+}
+
+.about-text p {
+    margin-bottom: 14px;
+    color: #444;
+}
+
+/* Menu Section */
+.filter-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 8px 18px;
+    border: 1px solid #183c2b;
+    background: white;
+    color: #183c2b;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background: #183c2b;
+    color: white;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 14px 14px 4px;
+    font-size: 18px;
+}
+
+.card p {
+    padding: 0 14px;
+    font-size: 14px;
+    color: #666;
+    flex: 1;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    margin-top: 10px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.card-footer strong {
+    color: #b85c38;
+    font-size: 17px;
+}
+
+.add-btn {
+    background: #183c2b;
+    color: white;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.add-btn:hover {
+    background: #b85c38;
+}
+
+/* Today's Special */
+.special {
+    background: #183c2b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left;
+}
+
+.special h2 {
+    color: white;
+}
+
+.special-content {
+    flex: 1;
+}
+
+.special-price {
+    font-size: 20px;
+    margin: 12px 0 20px;
+}
+
+.highlight {
+    color: #e6a56b;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.special-img {
+    width: 45%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Table Booking */
+.booking-form {
+    max-width: 600px;
+    margin: 20px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.booking-form input,
+.booking-form select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.booking-form button {
+    grid-column: span 2;
+}
+
+/* Customer Reviews */
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.review {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.customer-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 12px;
+    object-fit: cover;
+}
+
+.review p {
+    font-style: italic;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.stars {
+    color: #f4b400;
+    font-size: 16px;
+}
+
+/* Food Gallery */
+.gallery {
+    background: #f4ede2;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* Contact */
+.contact-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left;
+    max-width: 850px;
+    margin: auto;
+}
+
+.contact-info p {
+    margin-bottom: 12px;
+}
+
+.contact-info a {
+    color: #b85c38;
+}
+
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+/* Footer */
+footer {
+    background: #183c2b;
+    color: white;
+    padding: 25px;
+}
+
+/* Cart Modal */
+.cart-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.cart-box {
+    background: white;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 10px;
+    padding: 24px;
+    text-align: left;
+}
+
+.cart-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+}
+
+.cart-items {
+    max-height: 250px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.remove-btn {
+    background: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 3px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.cart-total {
+    text-align: right;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .hero, .about-container, .special, .contact-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text, .about-text {
+        text-align: center;
+    }
+    .hero-img, .about-img, .special-img {
+        width: 100%;
+        height: 240px;
+    }
+    .hero-btns {
+        justify-content: center;
+    }
+    .booking-form {
+        grid-template-columns: 1fr;
+    }
+    .booking-form button {
+        grid-column: span 1;
+    }
+}
