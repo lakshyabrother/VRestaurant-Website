@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRestaurant | Good Food, Great Moments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <h2>VRestaurant</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#booking">Book Table</a>
+            <a href="#contact">Contact</a>
+            <button class="cart-btn" onclick="openCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Good Food.<br>Great Moments.</h1>
+            <p>Enjoy delicious food made with fresh ingredients and served with love.</p>
+            <div class="hero-btns">
+                <a href="#menu" class="btn">Explore Menu</a>
+                <a href="#booking" class="btn btn-outline">Book a Table</a>
+            </div>
+        </div>
+        <img src="assets/images/hero-bg.jpg" alt="Delicious Food" class="hero-img">
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <img src="assets/images/about-restaurant.jpg" alt="About our restaurant" class="about-img">
+            <div class="about-text">
+                <h2>About Our Restaurant</h2>
+                <p>At VRestaurant, we believe great food brings people together. We have been serving delicious artisan meals using fresh, locally sourced ingredients for over 10 years.</p>
+                <p>Whether you're visiting for a relaxed family dinner or a quick bite with friends, we welcome you to experience authentic taste and warm hospitality.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <h2>Our Popular Menu</h2>
+        
+        <!-- Filter Buttons -->
+        <div class="filter-tabs">
+            <button class="tab-btn active" onclick="filterMenu('all', this)">All</button>
+            <button class="tab-btn" onclick="filterMenu('pizza-pasta', this)">Pizza & Pasta</button>
+            <button class="tab-btn" onclick="filterMenu('fastfood', this)">Burgers & Snacks</button>
+            <button class="tab-btn" onclick="filterMenu('desserts', this)">Desserts</button>
+            <button class="tab-btn" onclick="filterMenu('drinks', this)">Drinks</button>
+        </div>
+
+        <div class="menu-grid" id="menu-grid">
+            <div class="card" data-category="pizza-pasta">
+                <img src="assets/images/margherita-pizza.jpg" alt="Margherita Pizza">
+                <h3>Margherita Pizza</h3>
+                <p>Cheesy pizza with fresh tomatoes and basil.</p>
+                <div class="card-footer">
+                    <strong>₹249</strong>
+                    <button class="add-btn" onclick="addToCart('Margherita Pizza', 249)">+ Add</button>
+                </div>
+            </div>
+
+            <div class="card" data-category="fastfood">
+                <img src="assets/images/veggie-burger.jpg" alt="Veggie Burger">
+                <h3>Veggie Burger</h3>
+                <p>A delicious burger with fresh crisp vegetables.</p>
+                <div class="card-footer">
+                    <strong>₹179</strong>
+                    <button class="add-btn" onclick="addToCart('Veggie Burger', 179)">+ Add</button>
+                </div>
+            </div>
+
+            <div class="card" data-category="pizza-pasta">
+                <img src="assets/images/alfredo-pasta.jpg" alt="Alfredo Pasta">
+                <h3>Alfredo Pasta</h3>
+                <p>Creamy fettuccine with authentic Italian flavours.</p>
+                <div class="card-footer">
+                    <strong>₹229</strong>
+                    <button class="add-btn" onclick="addToCart('Alfredo Pasta', 229)">+ Add</button>
+                </div>
+            </div>
+
+            <div class="card" data-category="fastfood">
+                <img src="assets/images/paneer-tikka.jpg" alt="Paneer Tikka">
+                <h3>Paneer Tikka</h3>
+                <p>Grilled paneer cubes with aromatic spices.</p>
+                <div class="card-footer">
+                    <strong>₹219</strong>
+                    <button class="add-btn" onclick="addToCart('Paneer Tikka', 219)">+ Add</button>
+                </div>
+            </div>
+
+            <div class="card" data-category="fastfood">
+                <img src="assets/images/french-fries.jpg" alt="French Fries">
+                <h3>French Fries</h3>
+                <p>Golden, crispy potato fries tossed with salt & herbs.</p>
+                <div class="card-footer">
+                    <strong>₹99</strong>
+                    <button class="add-btn" onclick="addToCart('French Fries', 99)">+ Add</button>
+                </div>
+            </div>
+
+            <div class="card" data-category="desserts">
+                <img src="assets/images/chocolate-brownie.jpg" alt="Chocolate Brownie">
+                <h3>Chocolate Brownie</h3>
+                <p>Rich, warm Belgian dark chocolate fudge brownie.</p>
+                <div class="card-footer">
+                    <strong>₹129</strong>
+                    <button class="add-btn" onclick="addToCart('Chocolate Brownie', 129)">+ Add</button>
+                </div>
+            </div>
+
+            <div class="card" data-category="drinks">
+                <img src="assets/images/cold-coffee.jpg" alt="Cold Coffee">
+                <h3>Cold Coffee</h3>
+                <p>Chilled double-shot espresso blended with milk.</p>
+                <div class="card-footer">
+                    <strong>₹119</strong>
+                    <button class="add-btn" onclick="addToCart('Cold Coffee', 119)">+ Add</button>
+                </div>
+            </div>
+
+            <div class="card" data-category="drinks">
+                <img src="assets/images/lime-soda.jpg" alt="Fresh Lime Soda">
+                <h3>Fresh Lime Soda</h3>
+                <p>Refreshing citrus drink with mint & black salt.</p>
+                <div class="card-footer">
+                    <strong>₹79</strong>
+                    <button class="add-btn" onclick="addToCart('Fresh Lime Soda', 79)">+ Add</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offer Section -->
+    <section class="special">
+        <div class="special-content">
+            <h2>Today's Special Deal</h2>
+            <p>Get <strong>10% OFF</strong> on our Signature Margherita Pizza today!</p>
+            <p class="special-price">Only <span class="highlight">₹224</span> (Was ₹249)</p>
+            <button class="btn" onclick="addToCart('Signature Special Pizza', 224); openCart();">Claim Special Deal</button>
+        </div>
+        <img src="assets/images/special-offer.jpg" alt="Special Pizza Offer" class="special-img">
+    </section>
+
+    <!-- Table Booking Section -->
+    <section class="booking" id="booking">
+        <h2>Book a Table</h2>
+        <p>Reserve your table in advance and skip the waiting line.</p>
+        <form class="booking-form" onsubmit="bookTable(event)">
+            <input type="text" id="book-name" placeholder="Your Name" required>
+            <input type="tel" id="book-phone" placeholder="Phone Number" required>
+            <input type="date" id="book-date" required>
+            <select id="book-guests" required>
+                <option value="1">1 Person</option>
+                <option value="2" selected>2 Persons</option>
+                <option value="4">4 Persons</option>
+                <option value="6">6+ Persons</option>
+            </select>
+            <button type="submit" class="btn">Confirm Booking</button>
+        </form>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="review-grid">
+            <div class="review">
+                <img src="assets/images/customer-1.jpg" alt="Customer 1" class="customer-img">
+                <p>"Delicious food and a lovely, warm atmosphere!"</p>
+                <strong>— Priya Sharma</strong>
+                <p class="stars">★★★★★</p>
+            </div>
+            <div class="review">
+                <img src="assets/images/customer-2.jpg" alt="Customer 2" class="customer-img">
+                <p>"The pasta was super creamy and pizza crust was perfect."</p>
+                <strong>— Arjun Mehta</strong>
+                <p class="stars">★★★★★</p>
+            </div>
+            <div class="review">
+                <img src="assets/images/customer-3.jpg" alt="Customer 3" class="customer-img">
+                <p>"Fast delivery and hot food every single time."</p>
+                <strong>— Sneha Verma</strong>
+                <p class="stars">★★★★★</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Gallery -->
+    <section class="gallery">
+        <h2>Food Gallery</h2>
+        <div class="gallery-grid">
+            <img src="assets/images/gallery-1.jpg" alt="Restaurant Meal">
+            <img src="assets/images/gallery-2.jpg" alt="Chef Special">
+            <img src="assets/images/gallery-3.jpg" alt="Wood-fired Pizza">
+            <img src="assets/images/gallery-4.jpg" alt="Refreshing Drinks">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Visit Us & Contact</h2>
+        <div class="contact-box">
+            <div class="contact-info">
+                <p><strong>📍 Address:</strong> 42 Gourmet Street, City Center</p>
+                <p><strong>📞 Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></p>
+                <p><strong>✉️ Email:</strong> hello@vrestaurant.com</p>
+                <p><strong>🕒 Hours:</strong> Monday – Sunday: 11:00 AM – 10:00 PM</p>
+            </div>
+            <form class="contact-form" onsubmit="sendMessage(event)">
+                <input type="text" id="contact-name" placeholder="Your Name" required>
+                <input type="email" id="contact-email" placeholder="Your Email" required>
+                <textarea id="contact-msg" rows="3" placeholder="Your Message..." required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h3>VRestaurant</h3>
+        <p>Good Food. Great Moments.</p>
+        <p>© 2026 VRestaurant. All rights reserved.</p>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-box">
+            <div class="cart-head">
+                <h3>Your Cart</h3>
+                <span class="close-btn" onclick="closeCart()">&times;</span>
+            </div>
+            <div id="cart-items" class="cart-items">
+                <!-- Injected via JavaScript -->
+            </div>
+            <div class="cart-total">
+                <strong>Total Amount: ₹<span id="cart-total-price">0</span></strong>
+            </div>
+            <div class="cart-actions">
+                <button class="btn btn-outline" onclick="closeCart()">Continue Shopping</button>
+                <button class="btn" onclick="checkout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
